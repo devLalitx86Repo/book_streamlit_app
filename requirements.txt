@@ -1,0 +1,8 @@
+#matplot requirement
+matplotlib
+streamlit
+pandas
+numpy
+altair
+plotly
+snowflake-snowpark-python
