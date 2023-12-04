@@ -1,3 +1,4 @@
+import math
 def show_filter_visual(st,df):
     
     # Filters for the dataframe
@@ -6,8 +7,8 @@ def show_filter_visual(st,df):
     # Filter by price
     st.sidebar.subheader("Filter by price")
     #price slider
-    price_min = int(df['PRICE'].min())
-    price_max = int(df['PRICE'].max())
+    price_min = int(math.floor(df['PRICE'].min()))
+    price_max = int(math.ceil(df['PRICE'].max()))
     price_avg = int(df['PRICE'].mean())
     price_slider = st.sidebar.slider("Price range", price_min, price_max, (price_min, price_max))
     st.sidebar.write("Average price: €", price_avg)
